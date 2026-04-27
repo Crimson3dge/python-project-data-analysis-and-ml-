@@ -46,9 +46,7 @@ Correlation heatmap for feature relationships
 The following models were implemented:
 
 Linear Regression
-Ridge Regression
 Random Forest Regressor
-XGBoost (if used)
 
 Evaluation Metrics:
 
