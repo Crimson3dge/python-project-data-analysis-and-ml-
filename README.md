@@ -1,69 +1,106 @@
-# python-project-data-analysis-and-ml-
+🌍 Global Energy Consumption Analysis
+📌 Overview
 
-📌 Project Overview
+This project analyzes global energy consumption patterns using data science and machine learning techniques. It explores how energy usage, renewable adoption, and carbon emissions are interconnected across major economies.
 
-This project focuses on analyzing global energy consumption trends across multiple countries over time and building predictive models to estimate future energy usage. The study explores the relationship between total energy consumption, renewable energy share, fossil fuel dependency, and carbon emissions.
+The project follows a complete data science pipeline, including:
 
-With growing concerns about climate change and sustainability, understanding energy patterns is critical for policymakers, researchers, and industries transitioning toward cleaner energy sources.
-
+Data preprocessing
+Exploratory Data Analysis (EDA)
+Machine Learning modeling
+Clustering
+Forecasting
 🎯 Objectives
-Analyze global energy consumption patterns across countries and years
-Identify trends in renewable vs fossil fuel usage
-Study the correlation between energy consumption and carbon emissions
-Build machine learning models to predict energy consumption
-Generate actionable insights for sustainable energy planning
-📊 Dataset Description
+Analyze global energy consumption trends (2000–2024)
+Compare country-wise energy patterns
+Study relationships between:
+Renewable energy
+Fossil fuel dependency
+Carbon emissions
+Segment countries using clustering techniques
+Build predictive models for carbon emissions
+Forecast renewable energy adoption (2025–2029)
+📊 Dataset Information
+Source: Kaggle (Global Energy Consumption Dataset)
+Records: 10,000
+Countries: 10 major economies
+Time Period: 2000–2024
+Features:
+Country
+Year
+Total Energy Consumption (TWh)
+Per Capita Energy Use
+Renewable Energy Share (%)
+Fossil Fuel Dependency (%)
+Industrial Energy Use (%)
+Household Energy Use (%)
+Carbon Emissions (Million Tons)
+Energy Price Index
+⚙️ Technologies Used
+Python 3
+Pandas & NumPy → Data processing
+Matplotlib & Seaborn → Visualization
+Scikit-learn → Machine Learning
+Jupyter Notebook → Development environment
+🔍 Project Workflow
+1. Data Preprocessing
+Cleaned column names
+Checked missing values
+Generated statistical summaries
+Feature engineering:
+Carbon Intensity
+Renewability Score
+2. Exploratory Data Analysis (EDA)
+Country-wise energy trends
+Global consumption trends
+Correlation heatmap
 
-The dataset contains country-wise yearly energy statistics.
+📌 Key Insight:
 
-Key Features:
+Energy consumption is strongly correlated with carbon emissions, while renewable energy reduces emissions.
 
-Country – Name of the country
-Year – Time period of observation
-Total Energy Consumption (TWh) – Total energy usage
-Renewable Energy (%) – Share of renewable sources
-Fossil Fuel (%) – Dependency on fossil fuels
-Carbon Emissions (Million Tons) – CO₂ emissions
+3. Clustering (Unsupervised Learning)
+Applied K-Means Clustering (k=3)
+Used PCA for visualization
 
-Data Characteristics:
+📌 Result:
 
-Multi-country dataset
-Time-series format
-Cleaned and preprocessed for analysis
-🛠️ Technologies Used
-Python
-Pandas, NumPy – Data manipulation
-Matplotlib, Seaborn – Data visualization
-Scikit-learn – Machine Learning models
-Jupyter Notebook – Development environment
-🔍 Exploratory Data Analysis (EDA)
-Trend analysis of energy consumption over time
-Country-wise comparison
-Renewable vs fossil fuel distribution
-Correlation heatmap for feature relationships
-📈 Machine Learning Models
-
-The following models were implemented:
-
+Cluster 1 → Fossil-heavy countries
+Cluster 2 → Mixed economies
+Cluster 3 → Renewable-focused countries
+4. Machine Learning Models
+Models Used:
 Linear Regression
-Random Forest Regressor
-
+Random Forest
 Evaluation Metrics:
-
-MAE (Mean Absolute Error)
-RMSE (Root Mean Squared Error)
 R² Score
-📊 Key Insights
-Developed countries show signs of decoupling emissions from energy consumption
-Renewable energy adoption is increasing globally
-Fossil fuel dependency remains high in developing nations
-Strong correlation observed between energy consumption and carbon emissions
-🚀 Results
+RMSE
 
-The machine learning models successfully predicted energy consumption with high accuracy. Tree-based models (Random Forest/XGBoost) performed better in capturing non-linear relationships compared to linear models.
+📌 Results:
 
-📌 Future Work
-Incorporate deep learning models (LSTM for time-series forecasting)
-Include more granular data (monthly/sector-wise)
-Deploy the model using a web dashboard (Streamlit/Flask)
-Integrate real-time energy datasets
+Model	R² Score	Performance
+Linear Regression	0.0803	Poor fit
+Random Forest	0.9982	Excellent
+
+👉 Random Forest captured non-linear relationships effectively
+
+5. Renewable Energy Forecasting
+Used regression to predict trends (2025–2029)
+
+📌 Key Findings:
+
+Germany & UK → Strong renewable growth
+India & Australia → Rapid increase
+Russia → Slow transition
+Brazil → High renewable stability
+📈 Key Insights
+Global energy consumption is steadily increasing
+Fossil fuel dependency strongly increases emissions
+Renewable energy adoption reduces carbon emissions
+Countries show distinct energy behavior patterns
+Machine learning improves prediction accuracy significantly
+🚀 Future Improvements
+Add real-time data integration
+Use advanced time-series models (ARIMA, LSTM)
+Deploy as web dashboard (Streamlit / Flask)
+Include policy and economic variables
